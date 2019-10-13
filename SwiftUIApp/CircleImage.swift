@@ -10,7 +10,14 @@ import SwiftUI
 
 struct CircleImage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+        Image("profile_bg")
+            .resizable()
+            .frame(width: 240, height: 240)
+            .clipShape(Circle())
+            .overlay(
+                Circle().stroke(Color.white, lineWidth: 4)
+            )
+            .shadow(radius: 10)
     }
 }
 
